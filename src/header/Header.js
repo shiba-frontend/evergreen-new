@@ -6,18 +6,19 @@ const Header = () => {
     <div className='header'>
         <div className='container'>
             <div className='row'>
-                <div className='col-md-6'>
+                <div className='col-md-6 col-7'>
                     <div className='logo'>
                     <NavLink  to="/">
                         <img src='assets/image/_static_images_logo.png'/>
                     </NavLink>
                     </div>
                 </div>
-                <div className='col-md-6'>
+                <div className='col-md-6 col-5'>
                     <ul>
                         <li>
                         <NavLink className='primary-btn'>
                             start a project
+                            <span></span>
                         </NavLink>
                         </li>
                         <li>

@@ -24,8 +24,8 @@ const Banner = () => {
           <div className="col-md-8">
             <div className="banner-text">
               <h2 className="title-text animate-text">
-                Creating a <span>greener tomorrow </span> through expert
-                landscaping and <span> solar panel benefits </span> today.
+                Creating a <span>greener <br/> tomorrow </span> through expert
+                landscaping and <span> solar <br/> panel benefits </span> today.
               </h2>
             </div>
           </div>

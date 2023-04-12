@@ -1,9 +1,18 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Video = () => {
+
+  const [play, setplay] = useState(false)
+  var vid = document.getElementById("myVideo");
+
+const VideoHandler = () =>{ 
+  setplay(true);
+}
+
+
   useEffect(() => {
 
     gsap.to(".video-feature", {
@@ -19,34 +28,39 @@ const Video = () => {
       },
     });
 
- 
-
-
-
-
   }, []);
 
   return (
     <div className="video-element">
       <div className="container">
+      {!play ? 
         <div className="video-feature">
-          <div className="round-btn">
+          <div className="round-btn" onClick={VideoHandler}>
             <img
               src="assets/image/_static_images_round-text.png"
               className="rotate-img"
             />
             <span class="arrow-icon">
-              <img src="assets/image/_static_images_arrow-right.png" />
+              <img src="assets/image/_static_images_play-icon.png" />
             </span>
           </div>
-          <img src="assets/image/_static_images_video-img.png" />
+          <img src="assets/image/_static_images_video-img.png" className="main-a-image" />
         </div>
+        :
+          <div className="video">
+        <video width="100%" height="240" id="myVideo" autoPlay muted >
+          <source src="assets/image/movie.mp4" type="video/mp4"/>
+          <source src="assets/image/movie.ogg" type="video/ogg"/>
+        </video>
+        </div>
+        }
+        
         <div class="content-field">
           <div class="row align-items-center">
             <div class="col-lg-5 col-md-12">
               <div
                 class="lt-text"
-               
+                data-aos="fade-right"
               >
                 <h5 class="small-title">EVERGREEN</h5>
                 <h2 class="sub-title">
@@ -57,7 +71,7 @@ const Video = () => {
             <div class="col-lg-7 col-md-12">
               <div
                 class="rt-text"
-                
+                data-aos="fade-left"
               >
                 <p>
                   You've come to the right place! Our team of professionals is

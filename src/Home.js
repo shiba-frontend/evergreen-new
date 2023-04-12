@@ -2,6 +2,8 @@ import React from 'react'
 import Banner from './banner/Banner'
 import Video from './banner/Video'
 import WeAre from './what/WeAre'
+import Services from './Services'
+
 
 const Home = () => {
   return (
@@ -9,6 +11,7 @@ const Home = () => {
         <Banner/>
         <Video/>
         <WeAre/>
+       <Services/>
     </div>
   )
 }
