@@ -1,13 +1,437 @@
-body {
+::-webkit-scrollbar {
+  width:2px;
+  }
+  /*track*/
+  ::-webkit-scrollbar-track {
+  background:rgb(0, 0, 0);
+  border-color:rgb(255, 255, 255);
+  }
+  /*thumb*/
+  ::-webkit-scrollbar-thumb {
+    background: #07beb8;
+  }
+body{
+  font-family: 'GeneralSans-Variable';
+}
+ul, li{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+@font-face {
+  font-family: 'GeneralSans-Variable';
+  src: url('../public/assets/fonts/GeneralSans-Variable.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-Variable.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-Variable.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@font-face {
+  font-family: 'GeneralSans-VariableItalic';
+  src: url('../public/assets/fonts/GeneralSans-VariableItalic.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-VariableItalic.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-VariableItalic.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-Extralight';
+  src: url('../public/assets/fonts/GeneralSans-Extralight.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-Extralight.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-Extralight.ttf') format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-ExtralightItalic';
+  src: url('../public/assets/fonts/GeneralSans-ExtralightItalic.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-ExtralightItalic.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-ExtralightItalic.ttf') format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-Light';
+  src: url('../public/assets/fonts/GeneralSans-Light.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-Light.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-Light.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-LightItalic';
+  src: url('../public/assets/fonts/GeneralSans-LightItalic.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-LightItalic.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-LightItalic.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-Regular';
+  src: url('../public/assets/fonts/GeneralSans-Regular.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-Regular.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-Italic';
+  src: url('../public/assets/fonts/GeneralSans-Italic.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-Italic.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-Italic.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-Medium';
+  src: url('../public/assets/fonts/GeneralSans-Medium.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-Medium.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-MediumItalic';
+  src: url('../public/assets/fonts/GeneralSans-MediumItalic.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-MediumItalic.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-MediumItalic.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-Semibold';
+  src: url('../public/assets/fonts/GeneralSans-Semibold.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-Semibold.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-Semibold.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-SemiboldItalic';
+  src: url('../public/assets/fonts/GeneralSans-SemiboldItalic.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-SemiboldItalic.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-SemiboldItalic.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-Bold';
+  src: url('../public/assets/fonts/GeneralSans-Bold.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-Bold.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-BoldItalic';
+  src: url('../public/assets/fonts/GeneralSans-BoldItalic.woff2') format('woff2'),
+       url('../public/assets/fonts/GeneralSans-BoldItalic.woff') format('woff'),
+       url('../public/assets/fonts/GeneralSans-BoldItalic.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: italic;
+}
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-weight: 400;
+  color: #202a2b;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 12px 30px;
+  background: #fff;
+  border-radius: 80px;
+  letter-spacing: .8px;
+  font-family: GeneralSans-Medium;
+  font-size: 16px;
+  height: 49px;
+  text-decoration: none;
+}
+.banner{
+  background: url("../public/assets/image/body-bg.png");
+  padding: 108px 0 32px 0;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  padding: 10px 0;
+}
+
+.img-block img.main-img {
+  width: 318px;
+  animation: banner-img 7s linear infinite;
+}
+@keyframes banner-img {
+  0% {
+      transform: rotateY(45deg)
+  }
+
+  to {
+      transform: rotateY(-45deg)
+  }
+}
+
+.logo {
+  text-align: left;
+}
+.title-text {
+  font-family: GeneralSans-Medium;
+  font-size: 60px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.title-text span {
+  color: #07beb8;
+}
+.round-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.banner .round-btn {
+  position: absolute;
+  left: -122px;
+  bottom: 0px;
+}
+.banner .rotate-img {
+  animation: rotation-0 7s linear infinite;
+}
+@keyframes rotation-0 {
+  0% {
+      transform: rotate(0deg)
+  }
+
+  to {
+      transform: rotate(1turn)
+  }
+}
+
+.video-element{
+  background: url("../public/assets/image/video-bg-img.png");
+  padding: 50px 0;
+  
+}
+.video-feature {
+  max-width: 787px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  transform: scale(0.5);
+}
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #07beb8;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.img-block {
+  position: relative;
+}
+.round-btn .arrow-icon {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.video-feature .round-btn {
+  position: absolute;
+  width: 171px;
+  height: 171px;
+  top: 60px;
+  left: 45px;
+  background: #07beb8;
+}
+.video-feature .rotate-img {
+  animation: rotation-0 7s linear infinite;
+}
+.banner .bottom-text {
+  margin: 41px 0 28px 0;
+  padding: 41px 0 0;
+  border-top: 1px solid hsla(0,0%,100%,.14);
+  position: relative;
+}
+.banner .text-box a, .banner .text-box h3 {
+  font-size: 18px;
+  line-height: 1.3;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+.banner .text-box h3 {
+  font-family: GeneralSans-Semibold;
+  font-weight: 600;
+  padding: 0 0 12px;
+  letter-spacing: 2px;
+}
+.banner .text-box a {
+  display: inline-block;
+  font-weight: 400;
+  padding: 0;
+  letter-spacing: 1px;
+}
+.banner .text-box p {
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  letter-spacing: .8px;
+}
+.banner .bottom-text:after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 1px;
+  background: #fff;
+  right: 0;
+  top: -.5px;
+}
+
+.small-title {
+  font-family: GeneralSans-Semibold;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.video-element .lt-text h5 {
+  color: #202a2b;
+  text-transform: uppercase;
+  padding: 0 0 18px;
+}
+.sub-title {
+  font-family: GeneralSans-Medium;
+  font-size: 44px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.video-element .rt-text p {
+  font-family: GeneralSans-Medium;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #202a2b;
+  margin: 0;
+  padding: 0;
+}
+.video-element .rt-text {
+  max-width: 585px;
+  margin: 0 0 0 auto;
+  padding: 0 0 58px;
+  border-bottom: 1px solid rgba(32,42,43,.24);
+}
+.video-element .content-field {
+  margin: 0;
+  padding: 70px 0 80px;
+}
+.animate-text{
+  opacity: 0.5;
+}
+.weare-section{
+  background: url("../public/assets/image/body-bg.png");
+  background-size: cover;
+    background-position: center;
+    padding: 104px 0;
+}
+.small-title, .sub-title {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.weare-section .text-block p {
+  font-size: 17px;
+  color: #fff;
+}
+.weare-section .btn-block .primary-btn {
+  background: #04565e;
+  letter-spacing: .8px;
+  color: #fff;
+}
+.weare-section .text-block .btn-block {
+  max-width: 292px;
+  padding: 42px 0 0;
+  position: relative;
+}
+.video-element h2.sub-title {
+  color: #222;
 }
