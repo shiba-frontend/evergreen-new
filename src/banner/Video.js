@@ -31,7 +31,8 @@ const VideoHandler = () =>{
   }, []);
 
   return (
-
+<>
+{
     !play ? 
     <div className="video-element">
       <div className="container">
@@ -39,7 +40,7 @@ const VideoHandler = () =>{
         <div className="video-feature">
           <div className="round-btn" onClick={VideoHandler}>
             <img
-              src="assets/image/_static_images_round-text.png"
+              src="assets/image/_static_images_play-text.png"
               className="rotate-img"
             />
             <span class="arrow-icon">
@@ -48,38 +49,7 @@ const VideoHandler = () =>{
           </div>
           <img src="assets/image/_static_images_video-img.png" className="main-a-image" />
         </div>
-      
-        
-        
-        
-        <div class="content-field">
-          <div class="row align-items-center">
-            <div class="col-lg-5 col-md-12">
-              <div
-                class="lt-text"
-                data-aos="fade-right"
-              >
-                <h5 class="small-title">EVERGREEN</h5>
-                <h2 class="sub-title">
-                  Looking for expert home improvement services?
-                </h2>
-              </div>
-            </div>
-            <div class="col-lg-7 col-md-12">
-              <div
-                class="rt-text"
-                data-aos="fade-left"
-              >
-                <p>
-                  You've come to the right place! Our team of professionals is
-                  here to help you transform your home into the space of your
-                  dreams.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
+   
       </div>
     </div>
   
@@ -90,8 +60,39 @@ const VideoHandler = () =>{
       <source src="assets/image/video-3.mp4" type="video/ogg"/>
     </video>
   </div>
+}
+<div className="container">
+   <div class="content-field">
+    <div class="row align-items-center">
+      <div class="col-lg-5 col-md-12">
+        <div
+          class="lt-text"
+          data-aos="fade-left"
+        >
+          <h5 class="small-title">EVERGREEN</h5>
+          <h2 class="sub-title">
+            Looking for expert <br/> home improvement <br/> services?
+          </h2>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-12">
+        <div
+          class="rt-text"
+          data-aos="fade-right"
+        >
+          <p>
+            You've come to the right place! Our team of professionals is
+            here to help you transform your home into the space of your
+            dreams.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
    
- 
+
+  </>
   );
 };
 
