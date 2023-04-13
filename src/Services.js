@@ -85,7 +85,7 @@ const Services = () => {
             </div>
             <div className="stroke-text">
             <img src='assets/image/_static_images_stroke-text.png' className="w-100"  />
-           
+            <img src='assets/image/_static_images_stroke-text.png' className="w-100"  />
             </div>
         </div>
     )

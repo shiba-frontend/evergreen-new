@@ -12,9 +12,9 @@ function App() {
   useEffect(() => {
     AOS.init({
       offset: 200,
-      duration: 3000,
+      duration: 2000,
       easing: 'ease-in-sine',
-      delay: 100,
+     
     });
     AOS.refresh();
   }, []);

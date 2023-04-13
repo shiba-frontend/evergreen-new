@@ -31,9 +31,11 @@ const VideoHandler = () =>{
   }, []);
 
   return (
+
+    !play ? 
     <div className="video-element">
       <div className="container">
-      {!play ? 
+    
         <div className="video-feature">
           <div className="round-btn" onClick={VideoHandler}>
             <img
@@ -46,14 +48,9 @@ const VideoHandler = () =>{
           </div>
           <img src="assets/image/_static_images_video-img.png" className="main-a-image" />
         </div>
-        :
-          <div className="video">
-        <video width="100%" height="240" id="myVideo" autoPlay muted >
-          <source src="assets/image/movie.mp4" type="video/mp4"/>
-          <source src="assets/image/movie.ogg" type="video/ogg"/>
-        </video>
-        </div>
-        }
+      
+        
+        
         
         <div class="content-field">
           <div class="row align-items-center">
@@ -82,8 +79,19 @@ const VideoHandler = () =>{
             </div>
           </div>
         </div>
+        
       </div>
     </div>
+  
+    :
+    <div className="video">
+    <video width="100%" height="700" id="myVideo" autoPlay muted >
+      <source src="assets/image/video-3.mp4" type="video/mp4"/>
+      <source src="assets/image/video-3.mp4" type="video/ogg"/>
+    </video>
+  </div>
+   
+ 
   );
 };
 
